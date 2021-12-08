@@ -8,6 +8,7 @@ import DetailsScreen from '../screens/DetailsScreen';
 import ReviewsScreen from '../screens/ReviewsScreen';
 import AccountScreen from '../screens/accountScreen';
 import FavouritesScreen from '../screens/favouritesScreen';
+import ListFilterScreen from '../screens/ListFilterScreen';
 import { COLORS, SIZES } from '../constants/theme';
 
 const homeStack = createStackNavigator({
@@ -29,8 +30,25 @@ const homeStack = createStackNavigator({
       },
     },
   },
+  ListFilter: ListFilterScreen,
   Details: DetailsScreen,
   Reviews: ReviewsScreen,
+}, {
+  defaultNavigationOptions: {
+    headerTintColor: COLORS.primay,
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize: SIZES.h2,
+      color: COLORS.primay,
+    },
+    headerStyle: {
+      paddingTop: 50,
+      backgroundColor: COLORS.header,
+      elevation: 0,
+      borderBottomWidth: 0,
+      height: 50,
+    },
+  },
 });
 
 const mainStack = createBottomTabNavigator({

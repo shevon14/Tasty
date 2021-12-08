@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { COLORS } from '../constants/theme';
 import styles from './styles';
 
-const Resturent = ({ data }) => {
+const ResturentBox = ({ data }) => {
   const [starCount, setStarCount] = useState(data.rating);
 
   const rating = [];
@@ -24,9 +24,9 @@ const Resturent = ({ data }) => {
   }
 
   return (
-    <View style={styles.resturentContainer}>
-      <Image style={styles.image} source={{ uri: data.image_url }} />
-      <View style={styles.distanceContainer}>
+    <View style={styles.resturentBoxContainer}>
+      <Image style={styles.imageBox} source={{ uri: data.image_url }} />
+      <View style={styles.distanceBoxContainer}>
         <Text style={styles.distance}>
           {parseInt(data.distance / 1000, 10)}
           {' '}
@@ -35,13 +35,13 @@ const Resturent = ({ data }) => {
       </View>
       <View style={styles.textContainer}>
         <Text numberOfLines={1} style={styles.name}>{data.name}</Text>
-        <Text style={styles.address}>
+        <Text numberOfLines={1} style={styles.address}>
           {data.location.address1}
           ,
           {' '}
           {data.location.city}
         </Text>
-        <View style={styles.bottomContainer}>
+        <View style={styles.bottomRowContainer}>
           <View style={styles.starContainer}>
             {rating}
             {!isInt(starCount) && <Icon name="star-half" size={18} color={COLORS.yellow} /> }
@@ -59,4 +59,4 @@ const Resturent = ({ data }) => {
   );
 };
 
-export default Resturent;
+export default ResturentBox;

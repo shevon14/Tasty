@@ -8,6 +8,7 @@ export const COLORS = {
   white: '#FFFF',
   yellow: '#F4D03F',
   background: '#F5F5F5',
+  header: '#EDEAEA',
   icon: '#BFBEC4',
   headline: '#C1COC9',
   title: '#262628',
