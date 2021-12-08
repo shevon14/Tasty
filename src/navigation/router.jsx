@@ -8,7 +8,7 @@ import DetailsScreen from '../screens/DetailsScreen';
 import ReviewsScreen from '../screens/ReviewsScreen';
 import AccountScreen from '../screens/accountScreen';
 import FavouritesScreen from '../screens/favouritesScreen';
-import { COLORS } from '../constants/theme';
+import { COLORS, SIZES } from '../constants/theme';
 
 const homeStack = createStackNavigator({
   List: {
@@ -16,8 +16,12 @@ const homeStack = createStackNavigator({
     navigationOptions: {
       title: 'Find Best Resturents',
       headerTintColor: COLORS.background,
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        fontSize: SIZES.h2,
+      },
       headerStyle: {
-        paddingTop: 40,
+        paddingTop: 50,
         backgroundColor: COLORS.primay,
         elevation: 0,
         borderBottomWidth: 0,
@@ -56,11 +60,8 @@ const mainStack = createBottomTabNavigator({
   tabBarOptions: {
     activeTintColor: COLORS.primay,
     inactiveTintColor: COLORS.icon,
-    labelStyle: {
-      color: COLORS.subtitle,
-    },
     style: {
-      backgroundColor: COLORS.background,
+      backgroundColor: COLORS.white,
       paddingTop: 10,
     },
   },

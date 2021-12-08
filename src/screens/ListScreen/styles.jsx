@@ -4,7 +4,7 @@ import { COLORS, SIZES } from '../../constants/theme';
 const styles = StyleSheet.create({
   topContainer: {
     backgroundColor: COLORS.primay,
-    paddingBottom: 20,
+    paddingBottom: 10,
   },
   searchBarContainer: {
     flexDirection: 'row',

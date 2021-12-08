@@ -6,9 +6,10 @@ export const COLORS = {
   primay: '#F52D56',
   accent: '#FF9500',
   white: '#FFFF',
+  yellow: '#F4D03F',
   background: '#F5F5F5',
-  icon: '#DAD9E2',
-  headline: '#C1C0C9',
+  icon: '#BFBEC4',
+  headline: '#C1COC9',
   title: '#262628',
   subtitle: '#9B9B9B',
 };
@@ -20,6 +21,7 @@ export const SIZES = {
   h3: 16,
   h4: 14,
   h5: 12,
+  h6: 10,
   padding: 16,
 
   width,

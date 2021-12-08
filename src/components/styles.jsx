@@ -3,13 +3,16 @@ import { COLORS, SIZES, SCREEN_SIZE } from '../constants/theme';
 
 const styles = StyleSheet.create({
   listContainer: {
-    padding: 10,
+    paddingHorizontal: 10,
+    paddingTop: 15,
     backgroundColor: COLORS.background,
   },
   title: {
     fontSize: SIZES.h1,
     fontWeight: 'bold',
     color: COLORS.title,
+    paddingLeft: 10,
+    paddingBottom: 5,
   },
   resturentContainer: {
     margin: 5,
@@ -25,6 +28,8 @@ const styles = StyleSheet.create({
   },
   image: {
     resizeMode: 'cover',
+    borderTopStartRadius: 10,
+    borderTopEndRadius: 10,
     width: SCREEN_SIZE.width / 1.5,
     height: SCREEN_SIZE.width / 3,
   },
@@ -38,10 +43,26 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: COLORS.subtitle,
   },
+  distanceContainer: {
+    position: 'absolute',
+    backgroundColor: COLORS.primay,
+    borderRadius: 50,
+    height: 40,
+    width: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    right: 5,
+    top: SCREEN_SIZE.width / 3 - 20,
+  },
+  distance: {
+    fontSize: SIZES.h6,
+    fontWeight: 'bold',
+    color: COLORS.white,
+  },
   review: {
     fontSize: SIZES.h4,
     fontWeight: 'bold',
-    color: COLORS.title,
+    color: COLORS.subtitle,
   },
   starContainer: {
     flexDirection: 'row',
@@ -52,6 +73,7 @@ const styles = StyleSheet.create({
   bottomContainer: {
     flexDirection: 'row',
     paddingVertical: 5,
+    paddingTop: 10,
   },
 });
 

@@ -44,7 +44,7 @@ const ListScreen = (props) => {
           <ResturentList title="Cost Effective" data={filterResults('$')} />
           <ResturentList title="Bit Pricer" data={filterResults('$$')} />
           <ResturentList title="Big Spender" data={filterResults('$$$')} />
-          <View style={{ height: 200, backgroundColor: COLORS.background }} />
+          <View style={{ height: 160, backgroundColor: COLORS.background }} />
         </ScrollView>
       </View>
     </SafeAreaView>
