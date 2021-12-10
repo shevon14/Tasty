@@ -38,6 +38,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reviewShops/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reviewShops/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reviewShops/main.m; sourceTree = "<group>"; };
+		5D47CB8C276388A7006A21E0 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		5DB0FDEC275F9D5A004EB2B9 /* reviewShops-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "reviewShops-Bridging-Header.h"; sourceTree = "<group>"; };
 		5DB0FDED275F9D5B004EB2B9 /* ForceBridgingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForceBridgingHeader.swift; path = reviewShops/ForceBridgingHeader.swift; sourceTree = "<group>"; };
 		5DC305A22760D0D600D9DC8A /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		5DC71432275FA64D0092D2DD /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				5D47CB8C276388A7006A21E0 /* Entypo.ttf */,
 				5DC305A22760D0D600D9DC8A /* MaterialIcons.ttf */,
 				5DC71433275FA68E0092D2DD /* Ionicons.ttf */,
 			);

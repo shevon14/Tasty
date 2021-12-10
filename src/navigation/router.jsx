@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { Button, TouchableOpacity, View } from 'react-native';
 import ListScreen from '../screens/ListScreen';
 import DetailsScreen from '../screens/DetailsScreen';
 import ReviewsScreen from '../screens/ReviewsScreen';
@@ -31,7 +32,18 @@ const homeStack = createStackNavigator({
     },
   },
   ListFilter: ListFilterScreen,
-  Details: DetailsScreen,
+  Details: {
+    screen: DetailsScreen,
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: COLORS.white,
+        elevation: 0,
+        borderBottomWidth: 0,
+        paddingTop: 50,
+        height: 50,
+      },
+    },
+  },
   Reviews: ReviewsScreen,
 }, {
   defaultNavigationOptions: {

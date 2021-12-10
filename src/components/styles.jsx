@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.h5,
     fontWeight: '600',
     color: COLORS.subtitle,
+    paddingBottom: 10,
   },
   distanceContainer: {
     position: 'absolute',
@@ -111,8 +112,6 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     flexDirection: 'row',
-    paddingVertical: 5,
-    paddingTop: 10,
     alignItems: 'center',
   },
   bottomRowContainer: {
