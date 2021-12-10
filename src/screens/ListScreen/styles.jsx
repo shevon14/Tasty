@@ -27,6 +27,16 @@ const styles = StyleSheet.create({
     height: 40,
     borderRadius: 5,
   },
+  errorScreen: {
+    paddingTop: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  error: {
+    fontSize: SIZES.h1,
+    fontWeight: 'bold',
+    color: COLORS.title,
+  },
 });
 
 export default styles;

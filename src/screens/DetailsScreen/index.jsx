@@ -85,7 +85,7 @@ const DetailsScreen = (props) => {
           <Text style={styles.address}>
             {result.location.display_address}
           </Text>
-          <RatingBar ratingData={result.rating} reviewCount={result.review_count} />
+          <RatingBar ratingData={result.rating} reviewCount={result.review_count} showCount />
           <View style={styles.reviewBar}>
             <View style={styles.line} />
             <View style={styles.rowContainer}>
@@ -112,7 +112,7 @@ const DetailsScreen = (props) => {
                   </View>
                 </TouchableOpacity>
               </View>
-              <TouchableOpacity onPress={() => navigation.navigate('Reviews')}>
+              <TouchableOpacity onPress={() => navigation.navigate('Reviews', { id })}>
                 <View style={styles.reviewBox}>
                   <Text style={styles.reviewText}>
                     REVIEWS

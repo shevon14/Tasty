@@ -39,13 +39,18 @@ const ListScreen = (props) => {
         </View>
       </View>
       <View>
-        {errorMsg ? <Text>{errorMsg}</Text> : null}
-        <ScrollView>
-          <ResturentList title="Cost Effective" data={filterResults('$')} />
-          <ResturentList title="Bit Pricer" data={filterResults('$$')} />
-          <ResturentList title="Big Spender" data={filterResults('$$$')} />
-          <View style={{ height: 160, backgroundColor: COLORS.background }} />
-        </ScrollView>
+        {!errorMsg ? (
+          <ScrollView>
+            <ResturentList title="Cost Effective" data={filterResults('$')} />
+            <ResturentList title="Bit Pricer" data={filterResults('$$')} />
+            <ResturentList title="Big Spender" data={filterResults('$$$')} />
+            <View style={{ height: 160, backgroundColor: COLORS.background }} />
+          </ScrollView>
+        ) : (
+          <View style={styles.errorScreen}>
+            <Text style={styles.error}>{errorMsg}</Text>
+          </View>
+        ) }
       </View>
     </SafeAreaView>
   );

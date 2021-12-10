@@ -44,7 +44,18 @@ const homeStack = createStackNavigator({
       },
     },
   },
-  Reviews: ReviewsScreen,
+  Reviews: {
+    screen: ReviewsScreen,
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: COLORS.white,
+        elevation: 0,
+        borderBottomWidth: 0,
+        paddingTop: 50,
+        height: 50,
+      },
+    },
+  },
 }, {
   defaultNavigationOptions: {
     headerTintColor: COLORS.primay,

@@ -27,7 +27,7 @@ const ResturentBox = ({ data }) => (
         {' '}
         {data.location.city}
       </Text>
-      <RatingBar ratingData={data.rating} reviewCount={data.review_count} verticalBar />
+      <RatingBar ratingData={data.rating} reviewCount={data.review_count} verticalBar showCount />
     </View>
   </View>
 );

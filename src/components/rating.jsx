@@ -4,7 +4,9 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { COLORS } from '../constants/theme';
 import styles from './styles';
 
-const RatingBar = ({ ratingData, reviewCount, verticalBar }) => {
+const RatingBar = ({
+  ratingData, reviewCount, verticalBar, showCount,
+}) => {
   const [starCount] = useState(ratingData);
   const rating = [];
   for (let i = 0; i < starCount - 1; i++) {
@@ -30,13 +32,17 @@ const RatingBar = ({ ratingData, reviewCount, verticalBar }) => {
       <View style={styles.starContainer}>
         {rating}
       </View>
-      <Text style={styles.review}>
-        {' '}
-        (
-        {reviewCount}
-        {' '}
-        Reviews)
-      </Text>
+      {
+        showCount && (
+          <Text style={styles.review}>
+            {' '}
+            (
+            {reviewCount}
+            {' '}
+            Reviews)
+          </Text>
+        )
+      }
     </View>
   );
 };
