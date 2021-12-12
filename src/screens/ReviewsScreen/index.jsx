@@ -14,7 +14,6 @@ const ReviewsScreen = (props) => {
   const getResult = async (id) => {
     const response = await yelp.get(`/${id}/reviews`);
     setResult(response.data);
-    console.log('-----', result);
   };
 
   useEffect(() => {
@@ -49,7 +48,13 @@ const ReviewsScreen = (props) => {
                   <Text style={styles.name}>{item.user.name}</Text>
                   <RatingBar ratingData={item.rating} showCount={false} />
                 </View>
-                <Text style={styles.date}>{item.time_created}</Text>
+                <Text style={styles.date}>
+                  {(item.time_created).substring(0, 10)}
+                  {' '}
+                  |
+                  {' '}
+                  {(item.time_created).substring(10, 16)}
+                </Text>
                 <View style={styles.textContainer}>
                   <Text style={styles.review}>{item.text}</Text>
                 </View>

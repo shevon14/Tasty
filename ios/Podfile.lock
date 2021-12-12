@@ -71,6 +71,9 @@ PODS:
     - FlipperKit/Core
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
   - glog (0.3.5)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.180)
@@ -272,6 +275,8 @@ PODS:
   - React-jsinspector (0.66.3)
   - React-logger (0.66.3):
     - glog
+  - react-native-geolocation (2.0.2):
+    - React
   - react-native-safe-area-context (3.3.2):
     - React-Core
   - React-perflogger (0.66.3)
@@ -339,6 +344,9 @@ PODS:
     - React-jsi (= 0.66.3)
     - React-logger (= 0.66.3)
     - React-perflogger (= 0.66.3)
+  - RealmJS (10.10.1):
+    - GCDWebServer
+    - React
   - RNCMaskedView (0.1.11):
     - React
   - RNGestureHandler (2.1.0):
@@ -422,6 +430,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -435,6 +444,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RealmJS (from `../node_modules/realm`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
@@ -455,6 +465,7 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - fmt
+    - GCDWebServer
     - libevent
     - OpenSSL-Universal
     - YogaKit
@@ -494,6 +505,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-geolocation:
+    :path: "../node_modules/@react-native-community/geolocation"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   React-perflogger:
@@ -520,6 +533,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RealmJS:
+    :path: "../node_modules/realm"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
   RNGestureHandler:
@@ -549,6 +564,7 @@ SPEC CHECKSUMS:
   Flipper-RSocket: d9d9ade67cbecf6ac10730304bf5607266dd2541
   FlipperKit: d8d346844eca5d9120c17d441a2f38596e8ed2b9
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   glog: 5337263514dd6f09803962437687240c5dc39aa4
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: 1aa4f6a6ee7256b83db99ec1ccdaa80d10f9af9b
@@ -564,6 +580,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 433a691aee158533a6a6ee9c86cb4a1684fa2853
   React-jsinspector: d9c8eb0b53f0da206fed56612b289fec84991157
   React-logger: e522e76fa3e9ec3e7d7115b49485cc065cf4ae06
+  react-native-geolocation: cbd9d6bd06bac411eed2671810f454d4908484a8
   react-native-safe-area-context: 5cf05f49df9d17261e40e518481f2e334c6cd4b5
   React-perflogger: 73732888d37d4f5065198727b167846743232882
   React-RCTActionSheet: 96c6d774fa89b1f7c59fc460adc3245ba2d7fd79
@@ -577,6 +594,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: 50cfe7049167cfc7e83ac5542c6fff0c76791a9b
   React-runtimeexecutor: bbbdb3d8fcf327c6e2249ee71b6ef1764b7dc266
   ReactCommon: 9bac022ab71596f2b0fde1268272543184c63971
+  RealmJS: 2925b36a86fc179b0b58ad48386e43eb95188e9a
   RNCMaskedView: f127cd9652acfa31b91dcff613e07ba18b774db6
   RNGestureHandler: e5c7cab5f214503dcefd6b2b0cefb050e1f51c4a
   RNReanimated: 65583befd5706cc9c86ae9a081786181ced37b93

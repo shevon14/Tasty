@@ -5,16 +5,19 @@ import {
 import Carousel from 'react-native-snap-carousel';
 import Icon from 'react-native-vector-icons/Entypo';
 import IonIcon from 'react-native-vector-icons/Ionicons';
+import { UpdateMode } from 'realm';
 import yelp from '../../api/yelpAPI';
 import RatingBar from '../../components/rating';
 import { COLORS, SIZES } from '../../constants/theme';
 import styles from './styles';
+import realm from '../../services/realm';
 
 const DetailsScreen = (props) => {
   const { navigation } = props;
   const id = navigation.getParam('id');
 
   const [favorite, setFavourite] = useState(false);
+  const [favs, setFavs] = useState([]);
 
   const [result, setResult] = useState(null);
   const [days, setDays] = useState([
@@ -32,11 +35,31 @@ const DetailsScreen = (props) => {
   const getResult = async (id) => {
     const response = await yelp.get(`/${id}`);
     setResult(response.data);
+    const favouriteObject = realm.objects('FavouritesSchema').find((val) => val.restaurentId === id);
+    favouriteObject ? setFavourite(true) : setFavourite(false);
   };
 
   useEffect(() => {
     getResult(id);
   }, [id]);
+
+  const saveFavourites = () => {
+    setFavourite(true);
+    realm.write(() => {
+      realm.create('FavouritesSchema', {
+        restaurentId: id,
+        name: result.alias,
+      }, UpdateMode.Modified);
+    });
+  };
+
+  const removeFavourites = () => {
+    setFavourite(false);
+    realm.write(() => {
+      const favouriteObject = realm.objects('FavouritesSchema').find((val) => val.restaurentId === id);
+      realm.delete(favouriteObject);
+    });
+  };
 
   if (!result) {
     return null;
@@ -90,7 +113,14 @@ const DetailsScreen = (props) => {
             <View style={styles.line} />
             <View style={styles.rowContainer}>
               <View style={styles.iconRowContainer}>
-                <TouchableOpacity onPress={() => { setFavourite(!favorite); }}>
+                <TouchableOpacity onPress={() => {
+                  if (favorite === false) {
+                    saveFavourites();
+                  } else {
+                    removeFavourites();
+                  }
+                }}
+                >
                   <View style={styles.circle}>
                     <Icon name="heart" size={25} color={favorite ? COLORS.primay : COLORS.title} />
                   </View>
