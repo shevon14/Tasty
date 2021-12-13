@@ -177,6 +177,16 @@ const DetailsScreen = (props) => {
           }
           </View>
         </View>
+        <View style={styles.buttonAddReviewContainer}>
+          <TouchableOpacity onPress={() => {
+            Linking.openURL(`${result.url}`);
+          }}
+          >
+            <View style={styles.buttonAddReview}>
+              <Text style={styles.buttonTextAddReviews}>Add a Review</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

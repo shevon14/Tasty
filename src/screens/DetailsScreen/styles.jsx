@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { COLORS, SIZES } from '../../constants/theme';
+import { COLORS, SCREEN_SIZE, SIZES } from '../../constants/theme';
 
 const styles = StyleSheet.create({
   topContainer: {
@@ -98,6 +98,26 @@ const styles = StyleSheet.create({
   time: {
     fontWeight: '600',
     color: COLORS.title,
+  },
+  buttonAddReviewContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 20,
+  },
+  buttonAddReview: {
+    backgroundColor: COLORS.primay,
+    marginVertical: 5,
+    padding: 10,
+    width: SCREEN_SIZE.width - 40,
+    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonTextAddReviews: {
+    marginLeft: 5,
+    color: COLORS.white,
+    fontWeight: 'bold',
   },
 });
 
