@@ -11,7 +11,7 @@ export default () => {
         params: {
           limit: 50,
           term,
-          location: locationTerm, // need to set users location later
+          location: locationTerm,
         },
       }
         : {
@@ -19,12 +19,13 @@ export default () => {
             limit: 50,
             term,
             longitude: long,
-            latitude: lati, // need to set users location later
+            latitude: lati,
           },
         });
       setResults(response.data.businesses);
     } catch (err) {
-      setErrorMsg('Some thing went wrong! :(');
+      setErrorMsg('Some thing went wrong! :(', err);
+      console.log('ssss', err);
     }
   };
 

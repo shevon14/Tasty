@@ -7,7 +7,6 @@ import realm from '../../services/realm';
 import ResturentBox from '../../components/resturentBox';
 import searchResults from '../../api/searchResults';
 import { COLORS } from '../../constants/theme';
-import favouritesAction from '../../redux/action';
 
 const Favourites = ({ navigation }) => {
   const [searchApi, results, errorMsg] = searchResults();

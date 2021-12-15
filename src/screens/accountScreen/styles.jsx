@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { COLORS, SIZES } from '../../constants/theme';
 
 const styles = StyleSheet.create({
@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     backgroundColor: COLORS.header,
-    height: 120,
-    paddingTop: 50,
+    height: Platform.OS === 'ios' ? 120 : 80,
+    paddingTop: Platform.OS === 'ios' ? 50 : 0,
     marginBottom: 20,
   },
   title: {

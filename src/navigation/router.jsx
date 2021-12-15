@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Button, TouchableOpacity, View } from 'react-native';
+import { Button, Platform, TouchableOpacity, View } from 'react-native';
 import ListScreen from '../screens/ListScreen';
 import DetailsScreen from '../screens/DetailsScreen';
 import ReviewsScreen from '../screens/ReviewsScreen';
@@ -23,7 +23,7 @@ const homeStack = createStackNavigator({
         fontSize: SIZES.h2,
       },
       headerStyle: {
-        paddingTop: 50,
+        paddingTop: Platform.OS === 'ios' ? 50 : 0,
         backgroundColor: COLORS.primay,
         elevation: 0,
         borderBottomWidth: 0,
@@ -65,7 +65,7 @@ const homeStack = createStackNavigator({
       color: COLORS.primay,
     },
     headerStyle: {
-      paddingTop: 50,
+      paddingTop: Platform.OS === 'ios' ? 50 : 0,
       backgroundColor: COLORS.header,
       elevation: 0,
       borderBottomWidth: 0,
@@ -101,9 +101,12 @@ const mainStack = createBottomTabNavigator({
   tabBarOptions: {
     activeTintColor: COLORS.primay,
     inactiveTintColor: COLORS.icon,
+    tabStyle: {
+      height: 50,
+    },
     style: {
       backgroundColor: COLORS.white,
-      paddingTop: 10,
+      // paddingTop: 10,
     },
   },
 });
